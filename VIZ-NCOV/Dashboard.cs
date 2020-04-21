@@ -4,7 +4,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Reflection;
 using System.Windows.Forms;
 using Bunifu.Framework.UI;
 using QuickType;
@@ -23,10 +22,7 @@ namespace VIZ_NCOV
         #endregion
 
         #region Constructor
-        public Dashboard()
-        {
-            InitializeComponent();
-        }
+        public Dashboard() => InitializeComponent();
         #endregion
 
         #region Get Border data
@@ -36,10 +32,8 @@ namespace VIZ_NCOV
             string resource_data = Properties.Resources.Countries;
             textJson= resource_data;
             bmp = new Bitmap(this.pbox_map.Width, this.pbox_map.Height);
-            var welcome = WelcomeContinent.FromJson(textJson);
-
-            welcome.Features.ForEach((feature) => {
-                Country country = new Country(feature.Properties.Name, feature.Id);
+            WelcomeContinent.FromJson(textJson).Features.ForEach((feature) => {
+    Country country = new Country(feature.Properties.Name, feature.Id);
                 feature.Geometry.Coordinates.ForEach((polygon) =>
                 {
                     Polygon poly = new Polygon();
@@ -75,7 +69,7 @@ namespace VIZ_NCOV
                 });
                 try
                 {
-                    countries.Add(country.iso, country);
+        countries.Add(country.name, country);
                 }
                 catch { }
             });
@@ -149,14 +143,14 @@ namespace VIZ_NCOV
             StreamReader reader = new StreamReader("infected.csv");
             var dates = HelperFunctions.SplitCsv(reader.ReadLine());
             dates.Skip(4).ToList().ForEach((date) => this.dates.Add(DateTime.Parse(date)));
-            while(!reader.EndOfStream)
+
+            while (!reader.EndOfStream)
             {
                 var entry = HelperFunctions.SplitCsv(reader.ReadLine());
                 PointD coords = new PointD(double.Parse(entry[2]), double.Parse(entry[3]));
                
                 List<int> infected = new List<int>();
                 entry.Skip(4).ToList().ForEach((infection) =>
-
                 {
                     try { infected.Add(int.Parse(infection)); }
                     catch { try { infected.Add(infected.Last()); } catch { infected.Add(0); } }
@@ -177,6 +171,21 @@ namespace VIZ_NCOV
                     }
                     continue;
                 }
+                if(countries.ContainsKey(entry[1]))
+                {
+                    if (countries[entry[1]].infected.Count == 0)
+                    {
+                        countries[entry[1]].infected = infected;
+                    }
+                    else
+                    {
+                        for (int i = 0; i < countries[entry[1]].infected.Count; i++)
+                        {
+                            countries[entry[1]].infected[i] += infected[i];
+                        }
+                    }
+                    continue;
+                }
                 foreach (var country in countries.Values)
                 {
                     bool inside = false;
@@ -189,7 +198,7 @@ namespace VIZ_NCOV
                     }
                     if(inside)
                     {
-                        savedLocations.Add(entry[1], country.iso);
+                        savedLocations.Add(entry[1], country.name);
                         if(country.infected.Count==0)
                             country.infected = infected;
                         else
@@ -414,10 +423,10 @@ namespace VIZ_NCOV
             {
                 try
                 {
-                    client.DownloadFile("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv", "test.csv");
-                    client.DownloadFile("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv", "infected.csv");
-                    client.DownloadFile("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv", "dead.csv");
-                    client.DownloadFile("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv", "recovered.csv");
+                    client.DownloadFile("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", "test.csv");
+                    client.DownloadFile("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", "infected.csv");
+                    client.DownloadFile("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv", "dead.csv");
+                    client.DownloadFile("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv", "recovered.csv");
                 }
                 catch { MessageBox.Show("Failed to retrieve updated data\nLoading old data"); }
             }
@@ -506,10 +515,7 @@ namespace VIZ_NCOV
         #endregion
 
         #region Resize event
-        private void Dashboard_SizeChanged(object sender, EventArgs e)
-        {
-            UpdateInformation();
-        }
+        private void Dashboard_SizeChanged(object sender, EventArgs e) => UpdateInformation(); 
         #endregion
 
         #region Change Color Theme
@@ -547,10 +553,7 @@ namespace VIZ_NCOV
         #endregion
 
         #region Rainbow Panel Click
-        private void Panel_rainbow_Click(object sender, EventArgs e)
-        {
-            ChangeColor(Color.Transparent);
-        }
+        private void Panel_rainbow_Click(object sender, EventArgs e) => ChangeColor(Color.Transparent);
         #endregion
 
         #region Timeline bar scroll event

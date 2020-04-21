@@ -2,19 +2,13 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace VIZ_NCOV
 {
     public static class HelperFunctions
     {
-
-        public static bool IsConnectedToInternet() => System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable();
         static readonly Random rnd = new Random();
-
         public static PointF CoordinateToPoint(PointD point, Size box)
         {
             var x = (float)((point.lng + 180) * (box.Width / 360));

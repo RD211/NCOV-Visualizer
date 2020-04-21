@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.datagrid_infected = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -123,8 +123,8 @@
             this.datagrid_infected.AllowUserToOrderColumns = true;
             this.datagrid_infected.AllowUserToResizeColumns = false;
             this.datagrid_infected.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.datagrid_infected.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.datagrid_infected.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.datagrid_infected.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -132,14 +132,14 @@
             this.datagrid_infected.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datagrid_infected.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.datagrid_infected.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("NeoSans", 16F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagrid_infected.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("NeoSans", 16F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid_infected.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.datagrid_infected.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagrid_infected.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Country,
@@ -148,14 +148,14 @@
             this.Dead,
             this.Recovered,
             this.DeathRate});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagrid_infected.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagrid_infected.DefaultCellStyle = dataGridViewCellStyle15;
             this.datagrid_infected.DoubleBuffered = true;
             this.datagrid_infected.EnableHeadersVisualStyles = false;
             this.datagrid_infected.GridColor = System.Drawing.Color.White;
@@ -164,14 +164,14 @@
             this.datagrid_infected.Location = new System.Drawing.Point(0, 9);
             this.datagrid_infected.Name = "datagrid_infected";
             this.datagrid_infected.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nidus Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagrid_infected.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Nidus Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid_infected.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.datagrid_infected.RowHeadersVisible = false;
             this.datagrid_infected.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datagrid_infected.ShowEditingIcon = false;
@@ -289,15 +289,15 @@
             this.chart_global.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisX2.TitleFont = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Bold);
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Bold);
-            chartArea1.AxisY2.TitleFont = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Bold);
-            chartArea1.Name = "ChartArea1";
-            this.chart_global.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Bold);
-            this.chart_global.Legends.Add(legend1);
+            chartArea4.AxisX.TitleFont = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.AxisX2.TitleFont = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Bold);
+            chartArea4.AxisY.TitleFont = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Bold);
+            chartArea4.AxisY2.TitleFont = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Bold);
+            chartArea4.Name = "ChartArea1";
+            this.chart_global.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            legend4.TitleFont = new System.Drawing.Font("NeoSans", 12F, System.Drawing.FontStyle.Bold);
+            this.chart_global.Legends.Add(legend4);
             this.chart_global.Location = new System.Drawing.Point(1, 0);
             this.chart_global.Name = "chart_global";
             this.chart_global.Size = new System.Drawing.Size(897, 617);
@@ -574,7 +574,9 @@
             this.slider_timeline.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.slider_timeline.BackColor = System.Drawing.Color.Transparent;
+            this.slider_timeline.LargeChange = 100;
             this.slider_timeline.Location = new System.Drawing.Point(0, 629);
+            this.slider_timeline.MouseWheelBarPartitions = 100;
             this.slider_timeline.Name = "slider_timeline";
             this.slider_timeline.Size = new System.Drawing.Size(907, 30);
             this.slider_timeline.Style = MetroFramework.MetroColorStyle.Red;
